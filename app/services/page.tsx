@@ -107,7 +107,7 @@ export default function ServicesPage() {
               id={
                 isManagement ? "management" : isBugFix ? "bug-fixes" : undefined
               }
-              className={`p-7 sm:p-8 ${isManagement ? "lg:col-span-2" : ""}`}
+              className={`scroll-mt-[96px] p-7 sm:p-8 ${isManagement ? "lg:col-span-2" : ""}`}
               tone={isManagement ? "soft" : "plain"}
             >
               {isManagement ? (

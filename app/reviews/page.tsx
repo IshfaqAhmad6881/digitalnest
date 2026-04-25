@@ -281,7 +281,7 @@ export default function ReviewsPage() {
 
         <Surface
           id="bug-fixes"
-          className="mt-10 overflow-hidden p-8 sm:p-10"
+          className="scroll-mt-[96px] mt-10 overflow-hidden p-8 sm:p-10"
           tone="dark"
         >
           <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
