@@ -83,36 +83,42 @@ const testimonials = [
       "Communication was clear, delivery was fast, and the final product felt premium.",
     name: "Sofia M.",
     meta: "Product Lead, EU",
+    avatar: "/avatars/sofia.svg",
   },
   {
     quote:
       "Our WordPress build is now easy to edit and significantly faster on mobile.",
     name: "Daniel R.",
     meta: "Founder, US",
+    avatar: "/avatars/daniel.svg",
   },
   {
     quote:
       "They handled edge cases and polish that most teams ignore. Strong attention to detail.",
     name: "Ayesha K.",
     meta: "Agency Owner, UAE",
+    avatar: "/avatars/ayesha.svg",
   },
   {
     quote:
       "Clean code, clear planning, and a smooth handover. Exactly what we needed.",
     name: "Robert T.",
     meta: "Operations, UK",
+    avatar: "/avatars/robert-t.svg",
   },
   {
     quote:
       "They resolved urgent app bugs quickly and helped us ship with confidence.",
     name: "Hina S.",
     meta: "Marketing, UAE",
+    avatar: "/avatars/hina.svg",
   },
   {
     quote:
       "Bug fixes were handled professionally and the app feels stable again.",
     name: "Mark L.",
     meta: "Founder, US",
+    avatar: "/avatars/mark.svg",
   },
 ] as const;
 
@@ -164,9 +170,14 @@ function ReviewCard({
     <Surface className={`${pad}`} tone="plain">
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="grid h-10 w-10 place-items-center rounded-lg bg-black/5 text-sm font-black">
-            {t.name.split(" ").map((w) => w[0]).join("")}
-          </div>
+          {/* Using local SVG avatars for a consistent "dummy" look. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={t.avatar}
+            alt={`${t.name} profile`}
+            className="h-11 w-11 rounded-full border border-black/10 bg-white object-cover shadow-sm"
+            loading="lazy"
+          />
           <div>
             <div className="text-sm font-black">{t.name}</div>
             <div className="text-xs text-[color:var(--muted)]">{t.meta}</div>

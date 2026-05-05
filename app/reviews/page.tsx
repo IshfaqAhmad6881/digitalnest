@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import { Surface } from "@/components/Surface";
 import { site } from "@/lib/site";
+import { WriteReviewSection } from "@/components/WriteReviewSection";
 
 export const metadata: Metadata = {
   title: "Reviews",
@@ -272,6 +273,8 @@ export default function ReviewsPage() {
             </div>
           </div>
         </Surface>
+
+        <WriteReviewSection />
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r) => (

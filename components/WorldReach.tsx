@@ -5,11 +5,12 @@ function WorldMap() {
   return (
     <div className="relative">
       <div className="absolute inset-0 rounded-[var(--radius-card)] bg-gradient-to-br from-white/5 via-transparent to-emerald-500/10" />
+      <div aria-hidden="true" className="dn-map-sheen rounded-[var(--radius-card)]" />
 
       <svg
         aria-hidden="true"
         viewBox="0 0 1000 520"
-        className="relative z-10 h-auto w-full"
+        className="dn-map-drift relative z-10 h-auto w-full"
       >
         <defs>
           <pattern
@@ -50,8 +51,22 @@ function WorldMap() {
 
         {/* Soft glow */}
         <g opacity="0.55">
-          <circle cx="720" cy="200" r="120" fill="rgba(17,185,129,0.10)" />
-          <circle cx="260" cy="250" r="110" fill="rgba(43,102,246,0.10)" />
+          <circle
+            cx="720"
+            cy="200"
+            r="120"
+            fill="rgba(17,185,129,0.10)"
+            className="dn-glow-breathe"
+            style={{ animationDelay: "120ms" }}
+          />
+          <circle
+            cx="260"
+            cy="250"
+            r="110"
+            fill="rgba(43,102,246,0.10)"
+            className="dn-glow-breathe"
+            style={{ animationDelay: "460ms" }}
+          />
         </g>
       </svg>
 
@@ -60,6 +75,7 @@ function WorldMap() {
         className="dn-float absolute left-[20%] top-[18%] z-20 grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/10 backdrop-blur"
         style={{ animationDelay: "0ms" }}
       >
+        <span aria-hidden="true" className="dn-pulse-ring" style={{ animationDelay: "0ms" }} />
         <div className="grid h-8 w-8 place-items-center rounded-full bg-white/10 text-xs font-black text-white">
           AR
         </div>
@@ -68,6 +84,7 @@ function WorldMap() {
         className="dn-float absolute left-[50%] top-[32%] z-20 grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/10 backdrop-blur"
         style={{ animationDelay: "220ms" }}
       >
+        <span aria-hidden="true" className="dn-pulse-ring" style={{ animationDelay: "220ms" }} />
         <div className="grid h-8 w-8 place-items-center rounded-full bg-[color:var(--accent)]/70 text-xs font-black text-white">
           EU
         </div>
@@ -76,6 +93,7 @@ function WorldMap() {
         className="dn-float absolute left-[30%] top-[64%] z-20 grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/10 backdrop-blur"
         style={{ animationDelay: "420ms" }}
       >
+        <span aria-hidden="true" className="dn-pulse-ring" style={{ animationDelay: "420ms" }} />
         <div className="grid h-8 w-8 place-items-center rounded-full bg-[color:var(--ink)]/70 text-xs font-black text-white">
           SA
         </div>
@@ -84,6 +102,7 @@ function WorldMap() {
         className="dn-float absolute left-[78%] top-[66%] z-20 grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/10 backdrop-blur"
         style={{ animationDelay: "640ms" }}
       >
+        <span aria-hidden="true" className="dn-pulse-ring" style={{ animationDelay: "640ms" }} />
         <div className="grid h-8 w-8 place-items-center rounded-full bg-[color:var(--accent-2)]/70 text-xs font-black text-[color:var(--ink)]">
           AP
         </div>
